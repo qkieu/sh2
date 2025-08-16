@@ -92,8 +92,11 @@ struct sh2_Hal_s {
 
     // This function should return a 32-bit value representing a
     // microsecond counter.  The count may roll over after 2^32
-    // microseconds.  
+    // microseconds.
     uint32_t (*getTimeUs)(sh2_Hal_t *self);
+
+    /** Customizable optional pointer **/
+    void *handle;
 };
 
 // End of include guard
